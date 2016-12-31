@@ -37,7 +37,7 @@ service.find(argv.title, argv.author)
     }
     if(argv.file) {
       booksData.push(bookDetails);
-      fs.writeFileSync(argv.file, JSON.stringify(booksData), 'utf8');
+      fs.writeFileSync(argv.file, JSON.stringify(booksData, null, 4), 'utf8');
     }
   })
   .catch(() => {
